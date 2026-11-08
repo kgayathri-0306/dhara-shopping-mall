@@ -1,0 +1,651 @@
+
+/* =========================================
+   DHARA SHOPPING MALL - MAIN STYLESHEET
+   ========================================= */
+
+/* General Settings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: #333;
+    background: #fffaf5;
+    line-height: 1.6;
+}
+
+/* Navigation Bar */
+header {
+    background: white;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    padding: 15px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    text-decoration: none;
+    color: #e85d26;
+    font-size: 27px;
+    font-weight: 800;
+    line-height: 1.1;
+}
+
+.logo span {
+    display: block;
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: #555;
+    text-align: center;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ed642c;
+}
+
+.nav-button,
+.primary-button {
+    background: linear-gradient(135deg, #ff7139, #ed3f63);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.nav-button:hover,
+.primary-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(237, 63, 99, 0.25);
+}
+
+/* Hero Section */
+.hero {
+    min-height: 540px;
+    display: flex;
+    align-items: center;
+    padding: 70px 9%;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(45, 20, 25, 0.83),
+            rgba(45, 20, 25, 0.3)
+        ),
+        url("https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1600")
+        center / cover no-repeat;
+    color: white;
+}
+
+.hero-content {
+    max-width: 700px;
+}
+
+.welcome {
+    color: #ffd166;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    font-size: clamp(38px, 5vw, 62px);
+    line-height: 1.15;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: #ffd166;
+}
+
+.hero-description {
+    font-size: 17px;
+    max-width: 600px;
+    margin-bottom: 30px;
+}
+
+/* Common Section */
+.section {
+    padding: 75px 8%;
+    scroll-margin-top: 110px;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.subtitle {
+    color: #ed642c;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.section-heading h2 {
+    font-size: 34px;
+    color: #35243a;
+    margin: 8px 0;
+}
+
+/* =========================================
+   ABOUT SECTION
+   ========================================= */
+
+.about {
+    background: white;
+    text-align: center;
+}
+
+.about-description {
+    max-width: 850px;
+    margin: auto;
+    color: #666;
+    font-size: 17px;
+}
+
+.about-container {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 40px;
+}
+
+.about-image img {
+    width: 100%;
+    height: 370px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.about-content {
+    text-align: left;
+}
+
+.about-content h3 {
+    color: #e85d26;
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+.about-content p {
+    color: #666;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.tagline {
+    color: #ed642c;
+    margin-top: 25px;
+    font-size: 22px;
+}
+
+/* =========================================
+   FASHION COLLECTION GALLERY - NEW
+   ========================================= */
+
+.collections {
+    background: #fff3e8;
+}
+
+.collection-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.collection-card {
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.collection-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.collection-image {
+    width: 100%;
+    height: 260px;
+    overflow: hidden;
+}
+
+.collection-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.collection-card:hover .collection-image img {
+    transform: scale(1.08);
+}
+
+.collection-info {
+    padding: 22px 18px;
+    text-align: center;
+}
+
+.collection-label {
+    color: #ed642c;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.collection-info h3 {
+    color: #35243a;
+    font-size: 20px;
+    margin: 9px 0;
+}
+
+.collection-info p {
+    color: #777;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* =========================================
+   SHOPPING EXPERIENCE SECTION
+   ========================================= */
+
+.experience {
+    padding: 75px 20px;
+    text-align: center;
+    color: white;
+    background: linear-gradient(120deg, #ed642c, #d83f73);
+}
+
+.experience h2 {
+    font-size: 34px;
+    margin-bottom: 15px;
+}
+
+.experience p {
+    margin-bottom: 25px;
+}
+
+.experience .primary-button {
+    background: white;
+    color: #e85d26;
+}
+
+/* =========================================
+   CONTACT SECTION
+   ========================================= */
+
+.contact {
+    background: white;
+}
+
+.contact-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.contact-card {
+    background: #fff5ed;
+    padding: 30px 22px;
+    text-align: center;
+    border-radius: 14px;
+    border-bottom: 4px solid #ed642c;
+}
+
+.contact-card h3 {
+    color: #e85d26;
+    margin-bottom: 15px;
+}
+
+.contact-card p {
+    color: #666;
+    margin-bottom: 8px;
+}
+
+.contact-card a {
+    color: #ed642c;
+    font-weight: bold;
+}
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
+footer {
+    background: #302339;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+footer h2 {
+    color: #ffd166;
+    margin-bottom: 8px;
+}
+
+footer p {
+    margin: 8px 0;
+    color: #eee;
+}
+
+.copyright {
+    margin-top: 25px;
+    font-size: 13px;
+    color: #bbb;
+}
+
+/* =========================================
+   RESPONSIVE DESIGN
+   ========================================= */
+
+/* Tablets */
+@media (max-width: 1000px) {
+    .collection-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile Devices */
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .nav-links {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        gap: 16px;
+        flex-wrap: wrap;
+    }
+
+    .nav-links a {
+        font-size: 13px;
+    }
+
+    .nav-button {
+        padding: 9px 16px;
+        font-size: 13px;
+    }
+
+    .hero {
+        min-height: 480px;
+        padding: 55px 7%;
+    }
+
+    .about-container {
+        grid-template-columns: 1fr;
+    }
+
+    .about-image img {
+        height: 280px;
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+
+    .section {
+        padding: 55px 6%;
+        scroll-margin-top: 150px;
+    }
+
+    .section-heading h2 {
+        font-size: 27px;
+    }
+}
+
+/* Small Mobile Devices */
+@media (max-width: 500px) {
+
+    .collection-container {
+        grid-template-columns: 1fr;
+    }
+
+    .collection-image {
+        height: 280px;
+    }
+}
+
+@media (max-width: 420px) {
+
+    .logo {
+        font-size: 22px;
+    }
+
+    .nav-links {
+        gap: 12px;
+    }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition: none !important;
+        animation: none !important;
+    }
+}
+
+/* Google Maps Section */
+
+.map-container {
+    max-width: 1100px;
+    margin: 50px auto 0;
+    text-align: center;
+}
+
+.map-container h3 {
+    color: #35243a;
+    font-size: 26px;
+    margin-bottom: 22px;
+}
+
+.map-container iframe {
+    width: 100%;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.10);
+}
+
+/* Contact Links */
+
+.contact-card a {
+    display: inline-block;
+    margin-top: 12px;
+    color: #ed642c;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.contact-card a:hover {
+    color: #d83f73;
+    text-decoration: underline;
+}
+
+/* =========================================
+   STEP 6 - FINAL RESPONSIVE IMPROVEMENTS
+   ========================================= */
+
+/* Prevent horizontal scrolling */
+html,
+body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* Images should fit their containers */
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Tablet and Mobile */
+@media (max-width: 768px) {
+
+    .navbar {
+        padding: 14px 18px;
+        justify-content: space-between;
+    }
+
+    .logo {
+        font-size: 23px;
+    }
+
+    .nav-links {
+        gap: 15px;
+        padding: 8px 0;
+    }
+
+    .hero {
+        min-height: 450px;
+        padding: 50px 7%;
+        background-position: center;
+    }
+
+    .hero h1 {
+        font-size: clamp(34px, 8vw, 46px);
+    }
+
+    .hero-description {
+        font-size: 15px;
+    }
+
+    .about-container {
+        gap: 25px;
+    }
+
+    .about-image img {
+        width: 100%;
+        height: 300px;
+    }
+
+    .collection-container {
+        gap: 18px;
+    }
+
+    .collection-image {
+        height: 240px;
+    }
+
+    .contact-container {
+        gap: 18px;
+    }
+
+    .map-container {
+        margin-top: 35px;
+    }
+
+    .map-container iframe {
+        height: 320px;
+    }
+
+    .experience h2 {
+        font-size: 27px;
+    }
+}
+
+/* Small Mobile Screens */
+@media (max-width: 500px) {
+
+    .navbar {
+        padding: 12px 15px;
+    }
+
+    .nav-links {
+        width: 100%;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    .nav-button {
+        padding: 9px 14px;
+    }
+
+    .hero {
+        min-height: 430px;
+        padding: 45px 6%;
+    }
+
+    .hero h1 {
+        font-size: 35px;
+    }
+
+    .welcome {
+        font-size: 11px;
+        letter-spacing: 2px;
+    }
+
+    .section {
+        padding: 45px 5%;
+    }
+
+    .section-heading h2 {
+        font-size: 25px;
+    }
+
+    .collection-container {
+        grid-template-columns: 1fr;
+    }
+
+    .collection-image {
+        height: 270px;
+    }
+
+    .about-image img {
+        height: 250px;
+    }
+
+    .map-container iframe {
+        height: 280px;
+    }
+
+    footer {
+        padding: 35px 15px;
+    }
+}
